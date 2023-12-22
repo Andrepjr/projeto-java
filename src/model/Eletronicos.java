@@ -16,6 +16,6 @@ public class Eletronicos extends Produto {
 		this.modelo = modelo;
 	}
 	public String getResumo() {
-		return "Nome: " + getNome() + ",Preço: " + getPreco() + ",Descricao: " + getDescricao() + ",Estoque: " + getEstoque() + ",Fabricante: " + getFabricante() + ",Modelo: " + getModelo();
+		return "\nNome:\n " + getNome() + "\nPreço: \n" + getPreco() + "\nDescricao: \n" + getDescricao() + "\nEstoque:\n " + getEstoque() + "\nFabricante:\n " + getFabricante() + "\nModelo:\n " + getModelo();
 	}
 }

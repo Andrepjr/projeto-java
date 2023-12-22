@@ -1,7 +1,8 @@
 package menu;
 
 import java.util.Scanner;
-
+import java.util.Set;
+import java.util.HashSet;
 import java.util.InputMismatchException;
 
 import model.Alimentos;
@@ -9,10 +10,17 @@ import model.Bebida;
 import model.Eletronicos;
 import model.Vestuario;
 
+
 public class Menu {
 
+
+
+	
+	
 	public static void main(String[] args) {
 	Scanner leia = new Scanner(System.in);
+	
+	//Itens do Menu da loja
 	
 	//Vestuario
 	Vestuario vestuario = new Vestuario();
@@ -72,14 +80,25 @@ public class Menu {
 			System.out.println("            3 - Bebida                               ");
 			System.out.println("            4 - Eletronicos                          ");
 			System.out.println("            5 - Alimentos                            ");
-			System.out.println("            6 - Sair                                 ");
+			System.out.println("            6 - Listar Itens                         ");
+			System.out.println("            7 - Sair                                 ");
 			System.out.println("*****************************************************");
 			System.out.println("Entre com a opção desejada:                          ");
 			System.out.println("                                                     ");
 
-			opcao = leia.nextInt();
+			//Exceptions da classe menu
+			try {
+				opcao = leia.nextInt();
+			}catch(InputMismatchException e){
+				System.out.println("\nDigite valores inteiros!");
+				leia.nextLine();
+				opcao=0;
+			}
+			
 
-			if (opcao == 6) {
+			
+
+			if (opcao == 7) {
 				System.out.println("\nE-COMMERCE DA ANA - 2023");
 				 sobre();
                  leia.close();
@@ -119,6 +138,11 @@ public class Menu {
 					System.out.println("Alimentos");
 					System.out.println(alimentos.getResumo());
 					break;
+					
+				case 6:
+					System.out.println("Itens vendidos na Loja:");
+					produtos();
+					break;
 				
 				default:
 					System.out.println("\nOpção Inválida!\n");
@@ -128,7 +152,20 @@ public class Menu {
 	}
 	public static void sobre() {
 		System.out.println("\n*********************************************************");
+		
 
+	}
+	//Collection do Menu da Loja
+	public static void produtos() {
+		Set <String> produtos = new HashSet<String>();
+		
+		produtos.add("Vestuario");
+		produtos.add("Bebidas");
+		produtos.add("Eletronicos");
+		produtos.add("Alimentos");
+		
+		System.out.println(produtos);
+		
 
 	}
 

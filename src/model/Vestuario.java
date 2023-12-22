@@ -36,6 +36,6 @@ public class Vestuario extends Produto {
 		this.material = material;
 	}
 	public String getResumo() {
-		return "Nome: " + getNome() + ",Preço: " + getPreco() + ",Descricao: " + getDescricao() + ",Estoque: " + getEstoque() + ",Fabricante: " + getFabricante() + ",Tamanho: " + getTamanho() + ",Cor: " + getCor() + ",material: " + getMaterial();
+		return "\nNome:\n " + getNome() + "\nPreço:\n " + getPreco() + "\nDescricao:\n " + getDescricao() + "\nEstoque:\n " + getEstoque() + "\nFabricante:\n " + getFabricante() + "\nTamanho:\n " + getTamanho() + "\nCor:\n " + getCor() + "\nmaterial:\n " + getMaterial();
 	}
 }

@@ -28,6 +28,6 @@ public class Alimentos extends Produto {
 	}
 	
 	public String getResumo() {
-		return "Nome: " + getNome() + ",Preço: " + getPreco() + ",Descricao: " + getDescricao() + ",Estoque: " + getEstoque() + ",Fabricante: " + getFabricante();
+		return "Nome:\n " + getNome() + "\nPreço:\n " + getPreco() + "\nDescricao:\n " + getDescricao() + "\nEstoque:\n " + getEstoque() + "\nFabricante:\n " + getFabricante();
 	}
 }

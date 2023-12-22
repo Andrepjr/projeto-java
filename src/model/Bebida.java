@@ -47,7 +47,7 @@ public class Bebida extends Produto{
 	}
 
 	public String getResumo() {
-		return "Nome: " + getNome() + ",Preço: " + getPreco() + ",Descricao: " + getDescricao() + ",Estoque: " + getEstoque() + ",Fabricante: " + getFabricante() + ",Data de validade: " + getDatadevalidade() + ",Ingredientes: " + getIngredientes() + ",alcoolico: " + getAlcoolico() + ",Volume: " + getVolume();
+		return "\nNome:\n " + getNome() + "\nPreço:\n " + getPreco() + "\nDescricao:\n " + getDescricao() + "\nEstoque:\n " + getEstoque() + "\nFabricante: \n " + getFabricante() + "\nData de validade: \n" + getDatadevalidade() + "\nIngredientes: \n " + getIngredientes() + "\nalcoolico:\n " + getAlcoolico() + "\nVolume:\n " + getVolume();
 	}
 
 	}
